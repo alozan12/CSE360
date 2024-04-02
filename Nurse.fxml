@@ -63,7 +63,7 @@
                               <TextField style="-fx-background-color: white;" />
                            </children>
                         </VBox>
-                        <Label layoutX="23.0" layoutY="14.0" prefHeight="71.0" prefWidth="216.0" text="Nurse Portal" textFill="#394c7e">
+                        <Label layoutX="20.0" layoutY="27.0" prefHeight="48.0" prefWidth="216.0" text="Nurse Portal" textFill="#394c7e">
                            <font>
                               <Font size="40.0" />
                            </font>
