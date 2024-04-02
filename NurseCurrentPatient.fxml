@@ -62,7 +62,7 @@
                               <TextField style="-fx-background-color: white;" />
                            </children>
                         </VBox>
-                        <Label layoutX="23.0" layoutY="14.0" prefHeight="71.0" prefWidth="216.0" text="Nurse Portal" textFill="#394c7e">
+                        <Label layoutX="20.0" layoutY="27.0" prefHeight="39.0" prefWidth="216.0" text="Nurse Portal" textFill="#394c7e">
                            <font>
                               <Font size="40.0" />
                            </font>
@@ -111,7 +111,7 @@
                            <font>
                               <Font size="23.0" />
                            </font></Label>
-                        <VBox layoutX="34.0" layoutY="118.0" prefHeight="318.0" prefWidth="349.0">
+                        <VBox layoutX="34.0" layoutY="118.0" prefHeight="252.0" prefWidth="349.0" spacing="8.0">
                            <children>
                               <Label prefHeight="25.0" prefWidth="177.0" text="Weight:" textFill="#394c7e">
                                  <font>
@@ -124,8 +124,47 @@
                                     <Font size="16.0" />
                                  </font>
                               </Label>
+                              <TextField />
+                              <Label text="Body Temp:" textFill="#394c7e">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField />
+                              <Label text="Body Pressure" textFill="#394c7e">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField />
                            </children>
                         </VBox>
+                        <Label layoutX="27.0" layoutY="391.0" prefHeight="28.0" prefWidth="162.0" text="Patient Health" textFill="#394c7f">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <VBox layoutX="34.0" layoutY="419.0" prefHeight="123.0" prefWidth="349.0" spacing="9.5">
+                           <children>
+                              <Label text="Allergies:" textFill="#394c7e">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField />
+                              <Label prefHeight="17.0" prefWidth="122.0" text="Health Conserns:" textFill="#394c7e">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TextField />
+                           </children>
+                        </VBox>
+                        <Button layoutX="128.0" layoutY="543.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: rgba(56, 76, 126, 1);" text="Submit" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
                      </children></AnchorPane>
               </items>
             </SplitPane>
