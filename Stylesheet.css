@@ -1,0 +1,28 @@
+.sidebar {
+	-fx-background-color: #394C7E;
+}
+
+.sidebar_selected {
+	-fx-background-color: #273559;
+}
+
+.sidebar_btn {
+	-fx-background-color:transparent;
+}
+
+.regular_btn {
+	-fx-background-color: #394C7E;
+	-fx-text-fill: #D9D9D9;
+}
+
+.sidebar_btn:hover {
+	-fx-border-color: #D9D9D9;
+}
+
+.sidebar_circle {
+	-fx-background-color:#D9D9D9;;
+}
+
+.sidebar_text {
+	-fx-text-fill: #D9D9D9;
+}
