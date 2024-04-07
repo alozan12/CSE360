@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="900.0" style="-fx-background-color: rgba(217, 217, 217, 1);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane dividerPositions="0.1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="599.0" minWidth="900.0" prefHeight="599.0" prefWidth="900.0" style="-fx-background-color: rgba(217, 217, 217, 1);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phase3.Controller">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="100.0" style="-fx-background-color: rgba(57, 76, 126, 1);">
+    <AnchorPane maxWidth="85.0" minHeight="0.0" minWidth="85.0" prefHeight="398.0" prefWidth="85.0" style="-fx-background-color: rgba(57, 76, 126, 1);">
          <children>
             <VBox layoutX="1.0" layoutY="-2.0" prefHeight="600.0" prefWidth="85.0">
                <children>
@@ -49,17 +49,17 @@
                                  <font>
                                     <Font size="16.0" />
                                  </font></Label>
-                              <TextField style="-fx-background-color: white;" />
+                              <TextField fx:id="firstnameN" style="-fx-background-color: white;" />
                               <Label prefHeight="20.0" prefWidth="103.0" text="Last Name:" textFill="#394c7e">
                                  <font>
                                     <Font size="16.0" />
                                  </font></Label>
-                              <TextField style="-fx-background-color: white;" />
+                              <TextField fx:id="lastnameN" style="-fx-background-color: white;" />
                               <Label prefHeight="20.0" prefWidth="63.0" text="D.O.B.:" textFill="#394c7e">
                                  <font>
                                     <Font size="16.0" />
                                  </font></Label>
-                              <TextField style="-fx-background-color: white;" />
+                              <TextField fx:id="dobN" style="-fx-background-color: white;" />
                            </children>
                         </VBox>
                         <Label layoutX="20.0" layoutY="27.0" prefHeight="39.0" prefWidth="216.0" text="Nurse Portal" textFill="#394c7e">
@@ -89,19 +89,19 @@
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField />
+                              <TextField fx:id="previoushealthissues" />
                               <Label prefHeight="29.0" prefWidth="234.0" text="Previous Prescribed Medication:" textFill="#394c7e">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField />
+                              <TextField fx:id="previousprescribedmeds" />
                               <Label prefHeight="31.0" prefWidth="180.0" text="History of immunization:" textFill="#394c7e">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField />
+                              <TextField fx:id="historyofimmunisation" />
                            </children>
                         </VBox>
                      </children></AnchorPane>
@@ -118,25 +118,25 @@
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField />
+                              <TextField fx:id="weight" />
                               <Label prefHeight="25.0" prefWidth="209.0" text="Height:" textFill="#394c7e">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField />
+                              <TextField fx:id="height" />
                               <Label text="Body Temp:" textFill="#394c7e">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField />
+                              <TextField fx:id="bodytemp" />
                               <Label text="Body Pressure" textFill="#394c7e">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField />
+                              <TextField fx:id="bodypressure" />
                            </children>
                         </VBox>
                         <Label layoutX="27.0" layoutY="391.0" prefHeight="28.0" prefWidth="162.0" text="Patient Health" textFill="#394c7f">
@@ -151,16 +151,16 @@
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField />
+                              <TextField fx:id="allergies" />
                               <Label prefHeight="17.0" prefWidth="122.0" text="Health Conserns:" textFill="#394c7e">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <TextField />
+                              <TextField fx:id="healthconserns" />
                            </children>
                         </VBox>
-                        <Button layoutX="128.0" layoutY="543.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: rgba(56, 76, 126, 1);" text="Submit" textFill="WHITE">
+                        <Button layoutX="128.0" layoutY="543.0" mnemonicParsing="false" onAction="#submit" prefHeight="39.0" prefWidth="142.0" style="-fx-background-color: rgba(56, 76, 126, 1);" text="Submit" textFill="WHITE">
                            <font>
                               <Font size="20.0" />
                            </font>

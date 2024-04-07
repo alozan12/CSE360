@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.stage.Stage?>
 
-<Stage height="600.0" maxHeight="600.0" maxWidth="1000.0" title="Doctor Portal" width="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Stage height="600.0" maxHeight="600.0" maxWidth="1000.0" title="Doctor Portal" width="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phase3.Controller">
     <scene>
         <Scene>
             <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #D9D9D9;">
@@ -22,7 +22,7 @@
                   <font>
                      <Font size="22.0" />
                   </font></Label>
-               <Button layoutX="583.0" layoutY="516.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="222.0" style="-fx-background-color: #394c7e;" text="Save Information" textFill="WHITE">
+               <Button layoutX="583.0" layoutY="516.0" mnemonicParsing="false" onAction="#saveinfodoctorsummary" prefHeight="46.0" prefWidth="222.0" style="-fx-background-color: #394c7e;" text="Save Information" textFill="WHITE">
                   <font>
                      <Font size="20.0" />
                   </font>
@@ -31,12 +31,12 @@
                   <font>
                      <Font size="22.0" />
                   </font></Label>
-               <TextField layoutX="109.0" layoutY="225.0" prefHeight="149.0" prefWidth="704.0" />
+               <TextField fx:id="testFindings" layoutX="109.0" layoutY="225.0" prefHeight="149.0" prefWidth="704.0" />
                <Label layoutX="109.0" layoutY="378.0" text="Medication:" textFill="#394c7e">
                   <font>
                      <Font size="22.0" />
                   </font></Label>
-               <TextField layoutX="108.0" layoutY="417.0" prefHeight="73.0" prefWidth="705.0" />
+               <TextField fx:id="medication" layoutX="108.0" layoutY="417.0" prefHeight="73.0" prefWidth="705.0" />
                <Pane prefHeight="600.0" prefWidth="85.0" style="-fx-background-color: #394c7e;">
                   <children>
                      <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="New Visit" textAlignment="CENTER" textFill="WHITE" wrapText="true">

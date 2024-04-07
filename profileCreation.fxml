@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phase3.Controller">
    <children>
       <Label layoutX="320.0" layoutY="52.0" text="Create Profile " textFill="#39447e">
          <font>
@@ -25,7 +25,7 @@
                   <Font size="16.0" />
                </font>
             </Label>
-            <TextArea maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
+            <TextArea fx:id="firstname" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
                <VBox.margin>
                   <Insets left="60.0" top="6.0" />
                </VBox.margin>
@@ -41,7 +41,7 @@
                   <Insets top="20.0" />
                </padding>
             </Label>
-            <TextArea layoutX="70.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
+            <TextArea fx:id="lastname" layoutX="70.0" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
                <VBox.margin>
                   <Insets left="60.0" top="6.0" />
                </VBox.margin>
@@ -57,7 +57,7 @@
                   <Insets top="20.0" />
                </padding>
             </Label>
-            <TextArea layoutX="10.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
+            <TextArea fx:id="dob" layoutX="10.0" layoutY="115.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
                <VBox.margin>
                   <Insets left="60.0" top="6.0" />
                </VBox.margin>
@@ -73,7 +73,7 @@
                   <Insets top="20.0" />
                </padding>
             </Label>
-            <TextArea layoutX="10.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
+            <TextArea fx:id="phonenumber" layoutX="10.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
                <VBox.margin>
                   <Insets left="60.0" top="6.0" />
                </VBox.margin>
@@ -89,7 +89,7 @@
                   <Insets top="20.0" />
                </padding>
             </Label>
-            <TextArea layoutX="10.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
+            <TextArea fx:id="email" layoutX="10.0" layoutY="215.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="330.0">
                <VBox.margin>
                   <Insets left="60.0" top="6.0" />
                </VBox.margin>
@@ -137,7 +137,7 @@
                   <Insets top="6.0" />
                </VBox.margin>
             </TextArea>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" styleClass="regular_btn" stylesheets="@../css/Stylesheet.css" text="Create Profile">
+            <Button mnemonicParsing="false" onAction="#createprofile" prefHeight="30.0" prefWidth="142.0" styleClass="regular_btn" stylesheets="@../css/Stylesheet.css" text="Create Profile">
                <VBox.margin>
                   <Insets left="110.0" top="40.0" />
                </VBox.margin>

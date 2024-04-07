@@ -23,6 +23,7 @@ public class Nurse extends Application{
 	public void start(Stage nurseStage1) {
 		Parent root;
 		try {
+			System.out.print("Hello");
 			root = FXMLLoader.load(getClass().getResource("Nurse.fxml"));
 			
 			Scene scene = new Scene(root, 900,600);
