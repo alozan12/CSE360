@@ -16,6 +16,8 @@ public class filewrite {
 	
 	public static void createprofile(String firstname,String lastname, String dob,String phonenumber, String email) {
 		filename = firstname + lastname + "profiledata.txt";
+		String patientlistfile = "patientNames.txt";
+		String messagefile = firstname+"_message.txt";
 		firstname = firstname.trim();
 		lastname = lastname.trim();
 		try {
@@ -24,6 +26,26 @@ public class filewrite {
 			writer.write(firstname+"\n"+lastname+"\n"+dob+"\n"+phonenumber+"\n"+email+"\n");
 			writer.close();
 			System.out.println("Data entered into file.");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			FileWriter writer = new FileWriter(patientlistfile,true);
+			writer.write(firstname+" "+lastname+"\n");
+			writer.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		File file = new File(messagefile);
+		try {
+			if(file.createNewFile()) {
+				System.out.print("New File Created with name :"+messagefile);
+			}else {
+				System.out.println("File already exists.");
+			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
