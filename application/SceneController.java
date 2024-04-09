@@ -44,17 +44,7 @@ public class SceneController {
 	
 	//Handling Scene Transitions from FXML file to FXML file
 	//Misc Scene Changes
-	@FXML
-    private void switchToPatientHistory(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PatientHistory.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-        SceneController controller = loader.getController();
-        controller.setPrimaryStage(primaryStage);
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Patient History");
-        primaryStage.show();
-    }
+	
 	//Patient Related Scene Changes
 	@FXML
     private void switchToProfileTab(ActionEvent event) throws IOException {
@@ -134,6 +124,17 @@ public class SceneController {
         primaryStage.setTitle("Messaging");
         primaryStage.show();
     }
+	@FXML
+    private void switchToNursePatientHistory(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("NursePatientHistory.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        SceneController controller = loader.getController();
+        controller.setPrimaryStage(primaryStage);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Patient History");
+        primaryStage.show();
+    }
 	//Doctor Related Scene Changes
 	@FXML
     private void switchToDCP(ActionEvent event) throws IOException {
@@ -177,6 +178,17 @@ public class SceneController {
         controller.setPrimaryStage(primaryStage);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Messaging");
+        primaryStage.show();
+    }
+	@FXML
+    private void switchToPatientHistory(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PatientHistory.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        SceneController controller = loader.getController();
+        controller.setPrimaryStage(primaryStage);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Patient History");
         primaryStage.show();
     }
 }

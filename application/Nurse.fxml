@@ -32,7 +32,7 @@
                      <font>
                         <Font size="15.0" />
                      </font></Button>
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Patient &#10;Hoistory" textAlignment="CENTER" textFill="WHITE">
+                  <Button onAction="#switchToNursePatientHistory" mnemonicParsing="false" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Patient &#10;History" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font></Button>
