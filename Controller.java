@@ -1,5 +1,9 @@
 package phase3;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
@@ -44,13 +48,44 @@ public class Controller {
 	private TextField testFindings;
 	@FXML
 	private TextField medication;
+	@FXML
+	private TextArea username;
+	@FXML
+	private TextArea password;
+	@FXML
+	private TextArea confirmpass;
 	
 	public void createprofile(ActionEvent e) {
-		System.out.print("Create volume");
+		System.out.print("Create profile is pressed");
+		if(firstname.getText().isEmpty()||lastname.getText().isEmpty()||dob.getText().isEmpty()||phonenumber.getText().isEmpty()||email.getText().isEmpty()||username.getText().isEmpty()||password.getText().isEmpty()||confirmpass.getText().isEmpty()) {
+			ErrorWindow error = new ErrorWindow("Please make sure all text feilds are filled.");
+			error.show();
+			return;
+		}
+		if(!password.getText().equals(confirmpass.getText())) {
+			ErrorWindow error = new ErrorWindow("Password and Confirm password do not match.");
+			error.show();
+			return;
+		}
+		try {
+			FileWriter fw = new FileWriter("patient_login.txt");
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(username.getText()+" "+password.getText()+"\n");
+			bw.close();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		filewrite.createprofile(firstname.getText(), lastname.getText(), dob.getText(), phonenumber.getText(), email.getText());
 	}
 	
 	public void submit(ActionEvent e) {
+		if(firstnameN.getText().isEmpty()||lastnameN.getText().isEmpty()||weight.getText().isEmpty()||height.getText().isEmpty()||bodytemp.getText().isEmpty()||bodypressure.getText().isEmpty()||allergies.getText().isEmpty()||healthconserns.getText().isEmpty()||previoushealthissues.getText().isEmpty()||previousprescribedmeds.getText().isEmpty()||historyofimmunisation.getText().isEmpty()) {
+			ErrorWindow error = new ErrorWindow("Please make sure all text feilds are filled.");
+			error.show();
+			return;
+		}
 		System.out.print(weight.getText()+"\n"+height.getText()+"\n"+bodytemp.getText()+"\n"+bodypressure.getText()+"\n");
 		filewrite.writevitals(firstnameN.getText(), lastnameN.getText(),weight.getText(), height.getText(), bodytemp.getText(), bodypressure.getText());
 		
@@ -58,6 +93,11 @@ public class Controller {
 		filewrite.writehistory(firstnameN.getText(), lastnameN.getText(), previoushealthissues.getText(), previousprescribedmeds.getText(), historyofimmunisation.getText());
 	}
 	public void saveinfodoctorsummary(ActionEvent e) {
+		if(testFindings.getText().isEmpty()||medication.getText().isEmpty()) {
+			ErrorWindow error = new ErrorWindow("Please make sure all text feilds are filled.");
+			error.show();
+			return;
+		}
 		filewrite.writesummary(firstnameN.getText(), lastnameN.getText(), testFindings.getText()+"/n"+medication.getText());
 	}
 }
