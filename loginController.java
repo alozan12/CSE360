@@ -7,7 +7,9 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class loginController {
 	@FXML
@@ -18,6 +20,12 @@ public class loginController {
 	
 	public void loginNurse(ActionEvent e) {
 		System.out.println("Sign In Button pressed");
+		if(username.getText().isEmpty() || password.getText().isEmpty()) {
+			String msg = "Please make sure all feilds are filled.";
+			ErrorWindow error = new ErrorWindow(msg);
+			error.show();
+			return;
+		}
 		String stafloginfile = "staff_login.txt";
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(stafloginfile));
@@ -40,7 +48,10 @@ public class loginController {
 						}
 				}
 				if(!login) {
-					System.out.println("Invalid Username or Password");
+					//String invalidpass = "Invalid Username or Password";
+					ErrorWindow error = new ErrorWindow("Invalid Username or Password");
+					error.show();
+					
 					//print a error label on UI
 				}
 			} catch (IOException e1) {
@@ -55,6 +66,12 @@ public class loginController {
 	
 	public void loginDoctor(ActionEvent e) {
 		System.out.println("Sign In Button pressed");
+		if(username.getText().isEmpty() || password.getText().isEmpty()) {
+			String msg = "Please make sure all feilds are filled.";
+			ErrorWindow error = new ErrorWindow(msg);
+			error.show();
+			return;
+		}
 		String stafloginfile = "staff_login.txt";
 		try {
 			BufferedReader br = new BufferedReader(new FileReader(stafloginfile));
@@ -77,8 +94,8 @@ public class loginController {
 						}
 				}
 				if(!login) {
-					System.out.println("Invalid Username or Password");
-					//print a error label on UI
+					ErrorWindow error = new ErrorWindow("Invalid Username or Password");
+					error.show();
 				}
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
