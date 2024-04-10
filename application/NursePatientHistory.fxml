@@ -10,10 +10,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.stage.Stage?>
 
-<Stage height="600.0" maxHeight="600.0" maxWidth="1000.0" title="Doctor Portal" width="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-    <scene>
-        <Scene>
-            <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #D9D9D9;">
+
+            <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #D9D9D9;" xmlns:fx="http://javafx.com/fxml" fx:controller="application.SceneController">
             <children>
                <Label layoutX="174.0" layoutY="35.0" scaleX="2.0" scaleY="2.0" text="Patient History" textFill="#394c7e">
                   <font>
@@ -29,27 +27,27 @@
                   </font></Label>
                <Pane prefHeight="600.0" prefWidth="85.0" style="-fx-background-color: #394c7e;">
                   <children>
-                     <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="New Visit" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <Button onAction="#switchToNUI" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="New Visit" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                         <font>
                            <Font size="15.0" />
                         </font>
                      </Button>
-                     <Button layoutY="85.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Current Patient" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <Button onAction="#switchToNCP" layoutY="85.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Current Patient" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                         <font>
                            <Font size="15.0" />
                         </font>
                      </Button>
-                     <Button layoutY="170.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Message" textAlignment="CENTER" textFill="WHITE">
+                     <Button onAction="#switchToNMsg" layoutY="170.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Message" textAlignment="CENTER" textFill="WHITE">
                         <font>
                            <Font size="15.0" />
                         </font>
                      </Button>
-                     <Button layoutY="255.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #273559; -fx-border-color: BLACK;" text="Visit Summary" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <Button onAction="#switchToNVS" layoutY="255.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #273559; -fx-border-color: BLACK;" text="Visit Summary" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                         <font>
                            <Font size="15.0" />
                         </font>
                      </Button>
-                     <Button layoutY="340.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Patient History" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <Button onAction="#switchToNursePatientHistory" layoutY="340.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Patient History" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                         <font>
                            <Font size="15.0" />
                         </font>
@@ -75,6 +73,3 @@
                   </font>
                </Button>
             </children></AnchorPane>
-        </Scene>
-    </scene>
-</Stage>

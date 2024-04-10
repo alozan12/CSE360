@@ -1,5 +1,7 @@
 package application;
 
+import java.io.IOException;
+
 import javafx.application.Application;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
@@ -16,8 +18,16 @@ import javafx.stage.Stage;
 
 public class WelcomeScreen extends Application {
 
+    private final Stage primaryStage;
+    private final SceneController sceneController;
+
+    public WelcomeScreen(Stage primaryStage, SceneController sceneController) {
+        this.primaryStage = primaryStage;
+        this.sceneController = sceneController;
+    }
+    
     @Override
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage) throws IOException {
         // Set the title of the primary stage
         primaryStage.setTitle("Login Screen");
 
@@ -46,11 +56,19 @@ public class WelcomeScreen extends Application {
         Button signInButton = new Button("Sign In");
         signInButton.setStyle("-fx-background-color: green; -fx-text-fill: white;");
         signInButton.setPrefWidth(200);
+        signInButton.setOnAction(event -> {
+			try {
+				sceneController.enterDUI(primaryStage);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 
         // Create and set properties of the create account Hyperlink
         Hyperlink createAccountLink = new Hyperlink("New? Create Account");
         createAccountLink.setTextFill(Color.BLUE);
-        createAccountLink.setOnAction(event -> openAccountTypeWindow());
+        createAccountLink.setOnAction(event -> openAccountTypeWindow(primaryStage));
 
         // Add the nodes to the gridPane
         gridPane.add(welcomeText, 0, 0);
@@ -72,7 +90,7 @@ public class WelcomeScreen extends Application {
         primaryStage.show();
     }
 
-    private void openAccountTypeWindow() {
+    private void openAccountTypeWindow(Stage primaryStage){
         // Create a new Stage
         Stage accountTypeStage = new Stage();
         accountTypeStage.setTitle("Create Account");
@@ -104,6 +122,14 @@ public class WelcomeScreen extends Application {
         Button patientButton = new Button("Create Patient Account");
         patientButton.setPrefWidth(200);
         patientButton.setStyle("-fx-background-color: green; -fx-text-fill: white;");
+        patientButton.setOnAction(event -> {
+			try {
+				sceneController.enterProfileCreation(primaryStage);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		});
 
         // Add the nodes to the gridPane
         gridPane.add(title, 1, 0);

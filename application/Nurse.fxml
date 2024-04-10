@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="900.0" style="-fx-background-color: rgba(217, 217, 217, 1);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SceneController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="100.0" style="-fx-background-color: rgba(57, 76, 126, 1);">
+         <children>
+            <VBox layoutX="1.0" layoutY="-2.0" prefHeight="600.0" prefWidth="85.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: rgba(39, 53, 89, 1); -fx-border-color: black;" text="New&#10;Visit" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button onAction="#switchToNCP" mnemonicParsing="false" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Current&#10;Patient&#10;" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                  <Button onAction="#switchToNMsg" mnemonicParsing="false" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Message" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                  <Button onAction="#switchToNVS" mnemonicParsing="false" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Visit&#10;Summary&#10;" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+                  <Button onAction="#switchToNursePatientHistory" mnemonicParsing="false" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Patient &#10;History" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Button>
+               </children></VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: rgba(217, 217, 217, 1);">
+         <children>
+            <SplitPane dividerPositions="0.5" prefHeight="598.0" prefWidth="805.0" style="-fx-background-color: rgba(217, 217, 217, 1);">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox layoutX="21.0" layoutY="208.0" prefHeight="213.0" prefWidth="349.0" spacing="15.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="94.0" text="First Name:" textFill="#394c7e">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <TextField style="-fx-background-color: white;" />
+                              <Label prefHeight="20.0" prefWidth="103.0" text="Last Name:" textFill="#394c7e">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <TextField style="-fx-background-color: white;" />
+                              <Label prefHeight="20.0" prefWidth="63.0" text="D.O.B.:" textFill="#394c7e">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font></Label>
+                              <TextField style="-fx-background-color: white;" />
+                           </children>
+                        </VBox>
+                        <Label layoutX="20.0" layoutY="27.0" prefHeight="48.0" prefWidth="216.0" text="Nurse Portal" textFill="#394c7e">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="142.0" prefHeight="35.0" prefWidth="162.0" text="Patient Search" textFill="#394c7e">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                        <Button onAction="#switchToNCP" layoutX="128.0" layoutY="488.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: rgba(56, 76, 126, 1);" text="View Patient" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="603.0" prefWidth="544.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="142.0" prefHeight="26.0" prefWidth="162.0" text="Patients:" textFill="#394c7e">
+                           <font>
+                              <Font size="23.0" />
+                           </font></Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="395.0" layoutX="27.0" layoutY="183.0" stroke="WHITE" strokeType="INSIDE" width="349.0" />
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
