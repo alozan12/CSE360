@@ -20,17 +20,17 @@
          <children>
             <VBox layoutX="1.0" layoutY="-2.0" prefHeight="600.0" prefWidth="85.0">
                <children>
-                  <Button onAction="#switchToProfileTab" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: rgba(39, 53, 89, 1); -fx-border-color: black;" text="Profile" textAlignment="CENTER" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#switchToProfileTab" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Profile" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Message&#10;" textAlignment="CENTER" textFill="WHITE">
+                  <Button mnemonicParsing="false" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(39, 53, 89, 1); -fx-border-color: black;" text="Message&#10;" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </Button>
-                  <Button onAction="#switchToPVS" mnemonicParsing="false" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Visit Summary" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <Button mnemonicParsing="false" onAction="#switchToPVS" prefHeight="84.0" prefWidth="84.0" style="-fx-background-color: rgba(57, 76, 126, 1); -fx-border-color: black;" text="Visit Summary" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
                         <Font size="15.0" />
                      </font>
@@ -132,7 +132,7 @@
                         <Insets left="10.0" />
                      </padding>
                   </TextField>
-                  <Button fx:id="btnSendMessage" mnemonicParsing="false" onAction="#sendMessage" styleClass="sendMessageBtn" stylesheets="@application.css" text="Send" textFill="#b2e9f5">
+                  <Button fx:id="btnSendMessage" mnemonicParsing="false" styleClass="sendMessageBtn" stylesheets="@application.css" text="Send" textFill="#b2e9f5">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
