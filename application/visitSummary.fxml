@@ -15,13 +15,13 @@
          <children>
             <Label layoutX="23.0" layoutY="77.0" styleClass="sidebar_text" stylesheets="@../css/Stylesheet.css" text="Profile" />
             <Circle fill="#c5c5c5" layoutX="40.0" layoutY="44.0" mouseTransparent="true" radius="30.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar_circle" />
-            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="80.0" styleClass="sidebar_btn" stylesheets="@../css/Stylesheet.css" textFill="#c5c5c5" />
+            <Button onAction="#switchToProfileTab" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="80.0" styleClass="sidebar_btn" stylesheets="@../css/Stylesheet.css" textFill="#c5c5c5" />
             <Label layoutX="16.0" layoutY="170.0" styleClass="sidebar_text" stylesheets="@../css/Stylesheet.css" text="Message" />
             <Button onAction="#switchToPMsg" layoutY="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="80.0" styleClass="sidebar_btn" stylesheets="@../css/Stylesheet.css" textFill="#c5c5c5" />
             <Circle fill="#c5c5c5" layoutX="40.0" layoutY="140.0" mouseTransparent="true" radius="30.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar_circle" />
             <Pane layoutY="200.0" prefHeight="100.0" prefWidth="80.0" styleClass="sidebar_selected" stylesheets="@../css/Stylesheet.css">
                <children>
-                  <Button onAction="#switchToPVS" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="80.0" styleClass="sidebar_btn" stylesheets="@../css/Stylesheet.css" textFill="#c5c5c5" />
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="80.0" styleClass="sidebar_btn" stylesheets="@../css/Stylesheet.css" textFill="#c5c5c5" />
                   <Circle fill="#c5c5c5" layoutX="40.0" layoutY="40.0" mouseTransparent="true" radius="30.0" stroke="BLACK" strokeType="INSIDE" styleClass="sidebar_circle" />
                   <Label layoutX="2.0" layoutY="70.0" prefHeight="17.0" prefWidth="80.0" styleClass="sidebar_text" stylesheets="@../css/Stylesheet.css" text="Visit Summary" />
                </children>

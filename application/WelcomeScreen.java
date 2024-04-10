@@ -58,6 +58,7 @@ public class WelcomeScreen extends Application {
         signInButton.setPrefWidth(200);
         signInButton.setOnAction(event -> {
 			try {
+				primaryStage.close();
 				sceneController.enterDUI(primaryStage);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
@@ -90,8 +91,9 @@ public class WelcomeScreen extends Application {
         primaryStage.show();
     }
 
-    private void openAccountTypeWindow(Stage primaryStage) {
+    private void openAccountTypeWindow(Stage primaryStage){
         // Create a new Stage
+    	primaryStage.close();
         Stage accountTypeStage = new Stage();
         accountTypeStage.setTitle("Create Account");
 
@@ -124,6 +126,8 @@ public class WelcomeScreen extends Application {
         patientButton.setStyle("-fx-background-color: green; -fx-text-fill: white;");
         patientButton.setOnAction(event -> {
 			try {
+				//Stage stage = (Stage) patientButton.getScene().getWindow();
+				accountTypeStage.close();
 				sceneController.enterProfileCreation(primaryStage);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

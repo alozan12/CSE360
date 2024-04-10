@@ -43,7 +43,6 @@ public class SceneController {
 	}
 	
 	//Handling Scene Transitions from FXML file to FXML file
-	//Misc Scene Changes
 	
 	//Patient Related Scene Changes
 	@FXML

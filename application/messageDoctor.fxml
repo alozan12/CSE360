@@ -19,27 +19,27 @@
    <items>
       <Pane prefHeight="598.0" prefWidth="88.0" style="-fx-background-color: #394c7e;">
          <children>
-            <Button onAction="#switchToDUI" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="New Visit" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Button mnemonicParsing="false" onAction="#switchToDUI" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="New Visit" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button onAction="#switchToDCP" layoutY="85.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Current Patient" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Button layoutY="85.0" mnemonicParsing="false" onAction="#switchToDCP" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Current Patient" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutY="170.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Message" textAlignment="CENTER" textFill="WHITE">
+            <Button layoutY="170.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: rgba(39, 53, 89, 1); -fx-border-color: BLACK;" text="Message" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button onAction="#switchToDVS" layoutY="255.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Visit Summary" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Button layoutY="255.0" mnemonicParsing="false" onAction="#switchToDVS" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Visit Summary" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button onAction="#switchToPatientHistory" layoutY="340.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Patient History" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <Button layoutY="340.0" mnemonicParsing="false" onAction="#switchToPatientHistory" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Patient History" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
