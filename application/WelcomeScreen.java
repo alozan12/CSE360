@@ -90,7 +90,7 @@ public class WelcomeScreen extends Application {
         primaryStage.show();
     }
 
-    private void openAccountTypeWindow(Stage primaryStage) {
+    private void openAccountTypeWindow(Stage primaryStage){
         // Create a new Stage
         Stage accountTypeStage = new Stage();
         accountTypeStage.setTitle("Create Account");

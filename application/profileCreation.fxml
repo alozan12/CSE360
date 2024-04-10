@@ -138,7 +138,7 @@
                   <Insets top="6.0" />
                </VBox.margin>
             </TextArea>
-            <Button onActon="#switchToProfileTab" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" styleClass="regular_btn" stylesheets="@Stylesheet.css" text="Create Profile">
+            <Button onAction="#switchToProfileTab" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" styleClass="regular_btn" stylesheets="@Stylesheet.css" text="Create Profile">
                <VBox.margin>
                   <Insets left="110.0" top="40.0" />
                </VBox.margin>
