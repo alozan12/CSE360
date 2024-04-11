@@ -1,0 +1,64 @@
+package application;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.Label;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+
+public class Controller {
+
+    @FXML
+    private TextArea firstName;
+    
+    @FXML
+    private TextArea lastName;
+    
+    @FXML
+    private TextArea dob;
+    
+    @FXML
+    private TextArea phoneNumber;
+    
+    @FXML
+    private TextArea email;
+    
+    @FXML
+    private TextArea username;
+    
+    @FXML
+    private TextArea password;
+    
+    @FXML
+    private TextArea confirmPassword;
+
+    @FXML
+    private Label errorLabel;
+    
+    @FXML
+    private Button createProfileButton;
+
+    @FXML
+    public void initialize() {
+        createProfile();
+    }
+
+    public void createProfile() {
+        createProfileButton.setOnAction(e -> {
+            if (isEmpty(firstName) || isEmpty(lastName) || isEmpty(dob) || isEmpty(phoneNumber) || isEmpty(email) || isEmpty(username) || isEmpty(password) || isEmpty(confirmPassword)) {
+                Alert alert = new Alert(AlertType.ERROR);
+                alert.setTitle("Error Dialog");
+                alert.setHeaderText(null);
+                alert.setContentText("All fields must be filled");
+                alert.showAndWait();
+            } else {
+                errorLabel.setText("All fields are filled");
+            }
+        });
+    }
+
+    private boolean isEmpty(TextArea textArea) {
+        return textArea.getText().trim().isEmpty();
+    }
+}
