@@ -1,0 +1,35 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.side-bar{
+	-fx-background-color: #39447E;
+}
+.patientsChat{
+	-fx-background-color: #e1eefa;
+	-fx-background-radius:20px;
+	
+}
+.messagesReciever{
+	-fx-border-color: lightgray; /* Adjusts the border color to light gray */
+    -fx-border-width: 2; /* Sets the border width */
+    -fx-border-radius: 10; /* Rounds the corners */
+    -fx-background-radius: 10; /* Ensures the background is also rounded to match the border */
+}
+.messageSender{
+    -fx-border-width: 2; /* Sets the border width */
+    -fx-border-radius: 10; /* Rounds the corners */
+    -fx-background-radius: 10; /* Ensures the background is also rounded to match the border */
+    -fx-background-color: #39447E;
+    -fx-text-fill: white;
+    -fx-wrap-text: true;
+}
+.sendMessage{
+	-fx-border-width: 0;
+	-fx-background-color: #e1eefa;
+}
+.sendMessageBtn{
+	-fx-border-width: 0;
+	-fx-background-color: #000000;	
+	-fx-background-radius: 6;
+	-fx-text-fill: #e1eefa;
+}
+
