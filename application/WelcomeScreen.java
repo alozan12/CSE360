@@ -31,6 +31,58 @@ public class WelcomeScreen extends Application {
         // Set the title of the primary stage
         primaryStage.setTitle("Login Screen");
 
+        Stage accountTypeStage = new Stage();
+        // Create a GridPane and set its properties
+        GridPane gridPane = new GridPane();
+        gridPane.setAlignment(Pos.CENTER);
+        gridPane.setHgap(20);
+        gridPane.setVgap(30);
+        gridPane.setStyle("-fx-background-color: lightgrey;");
+
+        // Create and set properties of the title Text
+        Text title = new Text("Choose Role");
+        title.setFont(new Font(30));
+        title.setFill(Color.BLUE);
+        GridPane.setHalignment(title, HPos.CENTER);
+
+        // Create and set properties of the doctor Button
+        Button doctorButton = new Button("Doctor");
+        doctorButton.setPrefWidth(200);
+        doctorButton.setStyle("-fx-background-color: green; -fx-text-fill: white;");
+
+        // Create and set properties of the nurse Button
+        Button nurseButton = new Button("Nurse");
+        nurseButton.setPrefWidth(200);
+        nurseButton.setStyle("-fx-background-color: green; -fx-text-fill: white;");
+
+        // Create and set properties of the patient Button
+        Button patientButton = new Button("Patient");
+        patientButton.setPrefWidth(200);
+        patientButton.setStyle("-fx-background-color: green; -fx-text-fill: white;");
+        patientButton.setOnAction(event -> {
+				//Stage stage = (Stage) patientButton.getScene().getWindow();
+				accountTypeStage.close();
+				openAccountTypeWindow(primaryStage);
+		});
+
+        // Add the nodes to the gridPane
+        gridPane.add(title, 1, 0);
+        gridPane.add(doctorButton, 0, 2);
+        gridPane.add(nurseButton, 1, 2);
+        gridPane.add(patientButton, 2, 2);
+
+        // Create a Scene with the gridPane and set it on the accountTypeStage
+        Scene scene = new Scene(gridPane, 500, 400);
+        accountTypeStage.setScene(scene);
+        accountTypeStage.show();
+    }
+
+    private void openAccountTypeWindow(Stage primaryStage){
+        // Create a new Stage
+    	primaryStage.close();
+        Stage accountTypeStage = new Stage();
+        accountTypeStage.setTitle("Create Account");
+
         // Create a GridPane and set its properties
         GridPane gridPane = new GridPane();
         gridPane.setAlignment(Pos.CENTER);
@@ -99,63 +151,7 @@ public class WelcomeScreen extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
-/*
-    private void openAccountTypeWindow(Stage primaryStage){
-        // Create a new Stage
-    	primaryStage.close();
-        Stage accountTypeStage = new Stage();
-        accountTypeStage.setTitle("Create Account");
 
-        // Create a GridPane and set its properties
-        GridPane gridPane = new GridPane();
-        gridPane.setAlignment(Pos.CENTER);
-        gridPane.setHgap(20);
-        gridPane.setVgap(30);
-        gridPane.setStyle("-fx-background-color: lightgrey;");
-
-        // Create and set properties of the title Text
-        Text title = new Text("Choose Role");
-        title.setFont(new Font(30));
-        title.setFill(Color.PURPLE);
-        GridPane.setHalignment(title, HPos.CENTER);
-
-        // Create and set properties of the doctor Button
-        Button doctorButton = new Button("Create Doctor Account");
-        doctorButton.setPrefWidth(200);
-        doctorButton.setStyle("-fx-background-color: green; -fx-text-fill: white;");
-
-        // Create and set properties of the nurse Button
-        Button nurseButton = new Button("Create Nurse Account");
-        nurseButton.setPrefWidth(200);
-        nurseButton.setStyle("-fx-background-color: green; -fx-text-fill: white;");
-
-        // Create and set properties of the patient Button
-        Button patientButton = new Button("Create Patient Account");
-        patientButton.setPrefWidth(200);
-        patientButton.setStyle("-fx-background-color: green; -fx-text-fill: white;");
-        patientButton.setOnAction(event -> {
-			try {
-				//Stage stage = (Stage) patientButton.getScene().getWindow();
-				accountTypeStage.close();
-				sceneController.enterProfileCreation(primaryStage);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		});
-
-        // Add the nodes to the gridPane
-        gridPane.add(title, 1, 0);
-        gridPane.add(doctorButton, 0, 2);
-        gridPane.add(nurseButton, 1, 2);
-        gridPane.add(patientButton, 2, 2);
-
-        // Create a Scene with the gridPane and set it on the accountTypeStage
-        Scene scene = new Scene(gridPane, 500, 400);
-        accountTypeStage.setScene(scene);
-        accountTypeStage.show();
-    }
-*/
     public static void main(String[] args) {
         // Launch the application
         launch(args);

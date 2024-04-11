@@ -18,7 +18,7 @@ public class SceneController {
 	}
 	//Handling Scene transitions from Java file to FXML file
 	EventHandler<ActionEvent> enterDUI(Stage primaryStage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Nurse.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("profileTab.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
         SceneController controller = loader.getController();
