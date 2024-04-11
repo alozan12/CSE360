@@ -1,0 +1,16 @@
+
+Message: 
+Sender: Nurse
+Receiver: Patient
+Timestamp: 2024-04-10T16:00:44
+Content: Hello
+
+
+
+Message: 
+Sender: Nurse
+Receiver: Patient
+Timestamp: 2024-04-10T16:02:58
+Content: why?
+
+

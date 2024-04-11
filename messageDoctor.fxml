@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.099, 0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <items>
+      <Pane prefHeight="598.0" prefWidth="126.0" style="-fx-background-color: #394c7e;">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToDUI2" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="New Visit" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="85.0" mnemonicParsing="false" onAction="#switchToDCP2" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Current Patient" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="170.0" mnemonicParsing="false" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Message" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="255.0" mnemonicParsing="false" onAction="#switchToDVS2" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Visit Summary" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="340.0" mnemonicParsing="false" onAction="#switchToPatientHistory2" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: #394c7e; -fx-border-color: BLACK;" text="Patient History" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="344.0">
+         <children>
+            <Text fill="#39447e" layoutX="14.0" layoutY="42.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor Chat" wrappingWidth="127.21630859375">
+               <font>
+                  <Font name="System Bold Italic" size="23.0" />
+               </font>
+            </Text>
+            <HBox alignment="TOP_CENTER" layoutX="26.0" layoutY="70.0" />
+            <ScrollPane layoutY="60.0" prefHeight="533.0" prefWidth="354.0">
+               <content>
+                  <AnchorPane fx:id="initialize">
+                     <children>
+                        <VBox fx:id="patientList" layoutY="-2.0" onDragDetected="#initialize" prefHeight="802.0" prefWidth="332.0" spacing="15.0">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="15.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER" layoutX="53.0" layoutY="71.0" />
+         </children>
+      </AnchorPane>
+      <VBox>
+         <children>
+            <AnchorPane prefHeight="51.0" prefWidth="446.0">
+               <children>
+                  <Text fx:id="patientName" fill="#39447e" layoutX="14.0" layoutY="34.0" onDragDetected="#initialize" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="300.0">
+                     <font>
+                        <Font name="System Bold Italic" size="23.0" />
+                     </font>
+                  </Text>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </AnchorPane>
+            <ScrollPane prefHeight="490.0" prefWidth="500.0">
+               <content>
+                  <VBox fx:id="messageDisplayArea" onDragDetected="#initialize" prefHeight="600.0" prefWidth="427.0">
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <HBox prefHeight="46.0" prefWidth="376.0" styleClass="patientsChat" stylesheets="@application.css">
+               <children>
+                  <TextField fx:id="messageText" prefHeight="46.0" prefWidth="366.0" promptText="Type Message" styleClass="sendMessage" stylesheets="@application.css">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </TextField>
+                  <Button fx:id="btnSendMessage" mnemonicParsing="false" onAction="#sendMessage" styleClass="sendMessageBtn" stylesheets="@application.css" text="Send" textFill="#b2e9f5">
+                     <HBox.margin>
+                        <Insets right="3.0" top="9.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>

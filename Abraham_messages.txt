@@ -1,0 +1,12 @@
+Message 1:
+Sender: Patient
+Receiver: Nurse
+Timestamp: 2023-04-03T14:00:00
+Content: Hello, I have a question about my appointment. Can I drink water before the exam?
+Message 2:
+Sender: Nurse
+Receiver: Patient
+Timestamp: 2023-04-03T14:15:00
+Content: Yes, just no food.
+
+
